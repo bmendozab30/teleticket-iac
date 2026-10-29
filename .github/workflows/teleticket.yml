@@ -1,4 +1,3 @@
-yaml
 name: Teleticket Pipeline
 run-name: Deploy Teleticket - ${{github.actor}}
 on: [push]
