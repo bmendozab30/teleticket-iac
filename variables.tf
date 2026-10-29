@@ -1,7 +1,7 @@
 variable "region" {
   description = "Region de AWS (Sao Paulo)"
   type        = string
-  default     = "sa-east-1"
+  default     = "us-east-2"
 }
 
 variable "proyecto" {
