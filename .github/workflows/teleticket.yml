@@ -1,28 +1,13 @@
-yaml
 name: Teleticket Pipeline
-
-run-name: ${{github.actor}} está deployando Teleticket
+run-name: Deploy Teleticket
 on: [push]
 
 jobs:
-  Deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Iniciando deploy de Teleticket"
-      
-      - name: Checkout
-        uses: actions/checkout@v6
-      
-      - name: Terraform Init
-        run: echo "Ejecutando: terraform init"
-      
-      - name: Terraform Plan
-        run: echo "Ejecutando: terraform plan"
-      
-      - name: Terraform Apply
-        run: echo "Ejecutando: terraform apply"
-      
-      - name: Validar Lambdas
-        run: echo "Validando 3 Lambdas"
-      
+      - run: echo "Iniciando deploy"
+      - uses: actions/checkout@v6
+      - run: echo "Terraform init"
+      - run: echo "Terraform plan"
       - run: echo "Deploy completado"
